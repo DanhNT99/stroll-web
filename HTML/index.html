@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stroll a Travel Category</title>
+    <link rel="stylesheet" href="../CSS/main.css">
+    <link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo-text">
+                Str<i class="fa fa-globe" aria-hidden="true"></i>ll
+            </a>
+            <nav class="header-nav">
+                <ul class="header_nav-menu">
+                    <li class="header_nav-item">
+                        <a href="#" class="header_nav-item-link item-link-first">HOME</a>
+                    </li>
+                    <li class="header_nav-item">
+                        <a href="#" class="header_nav-item-link">ABOUT</a>
+                    </li>
+                    <li class="header_nav-item">
+                        <a href="#" class="header_nav-item-link">DESDTIANTIONS</a>
+                    </li>
+                    <li class="header_nav-item item-position" v-on:click="openMenu()" id="contain_menu-drop">
+                        <p class="header_nav-item-p">
+                            BLOG<i class="fa fa-angle-down" aria-hidden="true"></i>
+                        </p>
+                        <ul class="header_nav-menu-drop" v-bind:class="{openDropmenu: isOpen}">
+                            <li class="menu_drop-item">
+                                <a href="#" class="menu_drop-item-link">blog</a>
+                            </li>
+                            <li class="menu_drop-item">
+                                <a href="#" class="menu_drop-item-link">blog single</a>
+                            </li>
+                            <li class="menu_drop-item">
+                                <a href="#" class="menu_drop-item-link">landing page</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="header_nav-item">
+                        <a href="#" class="header_nav-item-link">CONTACT</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="banner">
+        <div class="container-banner">
+            <ul class="banner-slider">
+                <li class="banner_slider-item">
+                    <div class="banner-infor">
+                        <h6 class="banner_infor-sub">Mountain Holiday</h6>
+                        <h3 class="banner_infor-title">Explore your Travel <br><span>Destinations</span></h3>
+                        <p class="banner_infor-detail">Enjoy the Best Destinations with Our Travel Agency</p>
+                        <div class="banner_infor-link-layout">
+                            <div class="banner_infor-div"></div>
+                            <a href="#" class="banner_infor-link">Read More</a>
+                        </div>
+                    </div>
+                    <img src="../IMG/slider1.jpg" alt="" class="banner_infor-img">
+                </li>
+                <li class="banner_slider-item">
+                    <div class="banner-infor">
+                        <h6 class="banner_infor-sub">Mountain Holiday</h6>
+                        <h3 class="banner_infor-title">Explore your Dream <br><span>Vacation</span></h3>
+                        <p class="banner_infor-detail">Enjoy the Best Destinations with Our Travel Agency</p>
+                        <div class="banner_infor-link-layout">
+                            <div class="banner_infor-div"></div>
+                            <a href="#" class="banner_infor-link">Read More</a>
+                        </div>
+                    </div>
+                    <img src="../IMG/slider2.jpg" alt="" class="banner_infor-img">
+                </li>
+                <li class="banner_slider-item">
+                    <div class="banner-infor">
+                        <h6 class="banner_infor-sub">Mountain Holiday</h6>
+                        <h3 class="banner_infor-title">Explore your Travel <br><span>Destinations</span></h3>
+                        <p class="banner_infor-detail">Let's Enjoy The Wonders of Nature</p>
+                        <div class="banner_infor-link-layout">
+                            <div class="banner_infor-div"></div>
+                            <a href="#" class="banner_infor-link">Read More</a>
+                        </div>
+                    </div>
+                    <img src="../IMG/slider3.jpg" alt="" class="banner_infor-img">
+                </li>
+                <li class="banner_slider-item">
+                    <div class="banner-infor">
+                        <h6 class="banner_infor-sub">Mountain Holiday</h6>
+                        <h3 class="banner_infor-title">Explore your Travel <br><span>Destinations</span></h3>
+                        <p class="banner_infor-detail">Enjoy the Best Destinations with Our Travel Agency</p>
+                        <div class="banner_infor-link-layout">
+                            <div class="banner_infor-div"></div>
+                            <a href="#" class="banner_infor-link">Read More</a>
+                        </div>
+                    </div>
+                    <img src="../IMG/slider4.jpg" alt="" class="banner_infor-img">
+                </li>
+            </ul>
+            <ul class="list_btn-cricle">
+                <li class="btn_cricle-item">
+                    <span class="btn_cricle"></span>
+                </li>
+                <li class="btn_cricle-item">
+                    <span class="btn_cricle"></span>
+                </li>
+                <li class="btn_cricle-item">
+                    <span class="btn_cricle"></span>
+                </li>
+                <li class="btn_cricle-item">
+                    <span class="btn_cricle"></span>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section class="utilities">
+        <div class="container-main container-utilities">
+            <div class="utilities_item">
+                <div class="utilities_item-logo">
+                    <i class="fa fa-globe" aria-hidden="true"></i>
+                </div>
+                <div class="utilities_item-text">
+                    <a href="#" class="utilities_item-link">Voyages & Cruises</a>
+                    <p class="utilities_item-text-long">Lorem ipsum dolor sit amet, Ea consequuntur illum facere</p>
+                </div>
+            </div>
+            <div class="utilities_item">
+                <div class="utilities_item-logo">
+                    <i class="fa fa-bed" aria-hidden="true"></i>
+                </div>
+                <div class="utilities_item-text">
+                    <a href="#" class="utilities_item-link">Hotel Bookings</a>
+                    <p class="utilities_item-text-long">Lorem ipsum dolor sit amet, Ea consequuntur illum facere</p>
+                </div>
+            </div>
+            <div class="utilities_item">
+                <div class="utilities_item-logo">
+                    <i class="fa fa-plane" aria-hidden="true"></i>
+                </div>
+                <div class="utilities_item-text">
+                    <a href="#" class="utilities_item-link">Air Tickets</a>
+                    <p class="utilities_item-text-long">Lorem ipsum dolor sit amet, Ea consequuntur illum facere</p>
+                </div>
+            </div>
+            <div class="utilities_item">
+                <div class="utilities_item-logo">
+                    <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                </div>
+                <div class="utilities_item-text">
+                    <a href="#" class="utilities_item-link">Visas</a>
+                    <p class="utilities_item-text-long">Lorem ipsum dolor sit amet, Ea consequuntur illum facere</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <section class="famous">
+        <div class="container-main container-famous">
+            <div class="famoous-title">
+                <p class="title-text-small">
+                    Hot Tours
+                </p>
+                <h3 class="title-text-big">
+                    Popular Packages
+                </h3>
+            </div>
+            <div class="famous_list-tour" id="list-tour">
+                <div v-for="(item, index) in listTour" v-bind:key="index" class="famous_list-tour-item">
+                    <div class="famous_tour-item-img">
+                        <a href="#">
+                            <img v-bind:src="item.url" alt="" class="tour_item-img">
+                        </a>
+                    </div>
+                    <div class="famous_tour-text">
+                        <h3 class="famous_tour-text-title">
+                            {{item.name}}
+                        </h3>
+                        <a href="#" class="famous_tour-text-link">
+                            <h6>{{item.time}} <span class="famous_tour-text-price">{{ '$' + item.price}}</span></h6>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="video">
+        <div class="container-main container-video">
+            <a href="#" class="layout-video">
+                <i class="fa fa-play" aria-hidden="true"></i>
+            </a>
+        </div>
+    </section>
+    <section class="content-photo">
+        <div class="container-main container-photo">
+            <div class="photo_layout-title">
+                <p class="title-text-small">Short Video</p>
+                <h3 class="title-text-big">Find your perfect vacation</h3>
+            </div>
+            <div class="photo_layout-text">
+                <p class="photo-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur hic odio voluptatem tenetur
+                    consequatur.Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur hic odio
+                    voluptatem tenetur consequatur adipisicing elit.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="book">
+        <div class="container-main container-book">
+            <div class="book_layout-title">
+                <p class="title-text-small">10-30% Off</p>
+                <h3 class="title-text-big">Book Now </h3>
+            </div>
+            <div class="book_form-layout">
+                <div class="book_form-item">
+                    <label class="book_form-title">Name</label>
+                    <input type="text" placeholder="Name" class="book_form-input">
+                </div>
+                <div class="book_form-item">
+                    <label class="book_form-title">Destination</label>
+                    <select name="selectpicker" class="book_form-input">
+                        <option value="">Any</option>
+                        <option value="africa">Africa</option>
+                        <option value="america">America</option>
+                        <option value="asia">Asia</option>
+                        <option value="eastern-europe">Eastern Europe</option>
+                        <option value="europe">Europe</option>
+                        <option value="south-america">South America</option>
+                    </select>
+                </div>
+                <div class="book_form-item">
+                    <label class="book_form-title">Activity</label>
+                    <select name="activity" class="book_form-input">
+                        <option value="">Any</option>
+                        <option value="city-tours">City Tours</option>
+                        <option value="cultural-thematic-tours">Cultural &amp; Thematic Tours</option>
+                        <option value="family-friendly-tours">Family Friendly Tours</option>
+                        <option value="holiday-seasonal-tours">Holiday &amp; Seasonal Tours</option>
+                        <option value="indulgence-luxury-tours">Indulgence &amp; Luxury Tours</option>
+                        <option value="outdoor-activites">Outdoor Activites</option>
+                        <option value="relaxation-tours">Relaxation Tours</option>
+                        <option value="wild-adventure-tours">Wild &amp; Adventure Tours</option>
+                    </select>
+                </div>
+                <div class="book_form-item">
+                    <label class="book_form-title">Duration</label>
+                    <select name="duration" class="book_form-input">
+                        <option value="">Any</option>
+                        <option value="1">1 Day Tour</option>
+                        <option value="2">2-4 Days Tour</option>
+                        <option value="5">5-7 Days Tour</option>
+                        <option value="7">7+ Days Tour</option>
+                    </select>
+                </div>
+                <div class="book_form-item">
+                    <label class="book_form-title">Date</label>
+                    <input type="date" class="book_form-input">
+                </div>
+                <div class="book_form-item">
+                    <label class="book_form-title">Submit</label>
+                    <input type="submit" class="book_form-input submit-color">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="newletter">
+        <div class="container-newletter">
+            <div class="layout-newletter">
+                <p class="title-text-small color-yellow">lets stay on touch</p>
+                <h2 class="title-text-big color-white">
+                    sign up for 25% discount
+                </h2>
+                <p class="newletter-text">Want to get an instant discount for your next tour? Leave your email and sign
+                    up for our newsletter with 25% off all our offers.</p>
+                <form action="" class="form-newletter">
+                    <input type="text" placeholder="Email" class="form_newletter-input">
+                    <input type="submit" class="form_newletter-submit">
+                </form>
+                <p class="newletter-text">Subscribe to our free weekly newsletter for new update releases (no spam)</p>
+            </div>
+        </div>
+    </section>
+    <section class="meber">
+        <div class="container-main">
+            <p class="title-text-small">Testimonials</p>
+            <h3 class="title-text-big">Feedback From Our Customers</h3>
+            <div class="slider-menber">
+                <div class="layout-menber">
+                    <ul class="list-menber">
+                        <li class="menber-item">
+                           <div class="container_menber-item">
+                            <i class="fa fa-quote-left menber_item-icon" aria-hidden="true"></i> 
+                            <p class="menber-detail">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua.</p>
+                            <div class="layout-img">
+                                <img src="../IMG/menber1.jpg" alt="">
+                                <div class="layout_img-detail">
+                                    <h3 class="menber-name">theo hall</h3>
+                                    <p class="menber-job">SEO Expert</p>
+                                </div>
+                            </div>
+                           </div>
+                        </li>
+                        <li class="menber-item">
+                            <div class="container_menber-item">
+                             <i class="fa fa-quote-left menber_item-icon" aria-hidden="true"></i> 
+                             <p class="menber-detail">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                 incididunt ut labore et dolore magna aliqua.</p>
+                             <div class="layout-img">
+                                 <img src="../IMG/menber2.jpg" alt="">
+                                 <div class="layout_img-detail">
+                                     <h3 class="menber-name">jenna johnson</h3>
+                                     <p class="menber-job">SEO Expert</p>
+                                 </div>
+                             </div>
+                            </div>
+                         </li>
+                         <li class="menber-item">
+                            <div class="container_menber-item">
+                             <i class="fa fa-quote-left menber_item-icon" aria-hidden="true"></i> 
+                             <p class="menber-detail">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                 incididunt ut labore et dolore magna aliqua.</p>
+                             <div class="layout-img">
+                                 <img src="../IMG/menber3.jpg" alt="">
+                                 <div class="layout_img-detail">
+                                     <h3 class="menber-name">linda carini</h3>
+                                     <p class="menber-job">SEO Expert</p>
+                                 </div>
+                             </div>
+                            </div>
+                         </li>
+                    </ul>
+                    <ul class="list-menber">
+                        <li class="menber-item">
+                           <div class="container_menber-item">
+                            <i class="fa fa-quote-left menber_item-icon" aria-hidden="true"></i> 
+                            <p class="menber-detail">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua.</p>
+                            <div class="layout-img">
+                                <img src="../IMG/menber4.jpg" alt="">
+                                <div class="layout_img-detail">
+                                    <h3 class="menber-name">mike johnson</h3>
+                                    <p class="menber-job">SEO Expert</p>
+                                </div>
+                            </div>
+                           </div>
+                        </li>
+                        <li class="menber-item">
+                            <div class="container_menber-item">
+                             <i class="fa fa-quote-left menber_item-icon" aria-hidden="true"></i> 
+                             <p class="menber-detail">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                 incididunt ut labore et dolore magna aliqua.</p>
+                             <div class="layout-img">
+                                 <img src="../IMG/menber5.jpg" alt="">
+                                 <div class="layout_img-detail">
+                                     <h3 class="menber-name">theo hall</h3>
+                                     <p class="menber-job">SEO Expert</p>
+                                 </div>
+                             </div>
+                            </div>
+                         </li>
+                         <li class="menber-item">
+                            <div class="container_menber-item">
+                             <i class="fa fa-quote-left menber_item-icon" aria-hidden="true"></i> 
+                             <p class="menber-detail">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                 incididunt ut labore et dolore magna aliqua.</p>
+                             <div class="layout-img">
+                                 <img src="../IMG/menber6.jpg" alt="">
+                                 <div class="layout_img-detail">
+                                     <h3 class="menber-name">jenna johnson</h3>
+                                     <p class="menber-job">SEO Expert</p>
+                                 </div>
+                             </div>
+                            </div>
+                         </li>
+                    </ul>
+                </div>
+            </div>
+            <ul class="list_menber-btn-cricle">
+                <li class="btn_menber-cricle-item">
+                    <span class="btn_menber-cricle"></span>
+                </li>
+                <li class="btn_menber-cricle-item">
+                    <span class="btn_menber-cricle"></span>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <script src="../JS/index.js"></script>
+    <script src="../JS/slider.js"></script>
+    <script src="../JS/tour.js"></script>
+</body>
+
+</html>
