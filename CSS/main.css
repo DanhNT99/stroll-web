@@ -548,6 +548,9 @@ a {
 }
 
 /* -----------menber----------- */
+.container-member {
+    padding-bottom: 80px;
+}
 .layout-menber {
     margin-top: 40px;
     display: flex;
