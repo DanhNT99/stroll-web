@@ -29,7 +29,7 @@ a {
 }
 .header {
     background: linear-gradient(#c22323 5%,#f3000d);
-    height: 73px;
+    padding: 16px 0px 16px 0px;
 }
 .header-container {
     display: flex;
@@ -46,6 +46,9 @@ a {
     color: #fec32e;
     margin: 0px 5px 0px 5px;
 
+}
+.layout-menu-mobile, .header-icon-bar{
+    display: none;
 }
 .header_nav-menu {
     display: flex;
@@ -115,12 +118,14 @@ a {
 .header_nav-menu-drop::before {
     content: "";
     position: absolute;
-    top: -28px;
+    width: 12px;
+    height: 12px;
+    top: -7px;
     left: 70px;
-    border-top: 15px solid transparent;
-    border-right: 8px solid transparent;
-    border-bottom: 15px solid #ffffff;
-    border-left: 8px solid transparent;
+    background-color:#fff;
+    border-top: 1px solid rgb(191, 187, 187);
+    border-left: 1px solid rgb(191, 187, 187);
+    transform: rotate(45deg);
 }
 
 /* -------banner-slider -------------*/
@@ -207,6 +212,7 @@ a {
 }
 .list_btn-cricle {
     position: absolute;
+    width: fit-content;
     bottom: 50px;
     right: 40px;
     display: flex
@@ -551,6 +557,9 @@ a {
 .container-member {
     padding-bottom: 80px;
 }
+.slider-member-mobile {
+    display: none;
+}
 .layout-menber {
     margin-top: 40px;
     display: flex;
@@ -639,6 +648,9 @@ a {
     display: flex;
     bottom: 40px;
     right: 0px;
+}
+.list_menber-btn-cricle-mobile {
+    display: none;
 }
 .btn_menber-cricle-item {
     width: 23px;
@@ -786,4 +798,26 @@ a {
 }
 .below_list-left-item a:hover {
     color: #006989;
+}
+/* --------btn-scroll----------- */
+.layout-btn-scroll {
+    position: fixed;
+    bottom: 90px;
+    right: 0px;
+    display: none;
+    z-index: 2;
+}
+.btn-scroll {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    background-color: #DB162F;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.btn-scroll i {
+    color: #ffffff;
+    font-size: 13px;
 }

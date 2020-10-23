@@ -1,0 +1,39 @@
+diff.astextplain.textconv=astextplain
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+http.sslbackend=openssl
+http.sslcainfo=E:/Git/mingw64/ssl/certs/ca-bundle.crt
+core.autocrlf=true
+core.fscache=true
+core.symlinks=false
+pull.rebase=false
+credential.helper=manager
+user.name==
+user.email==
+user.name==
+user.email==
+user.name==
+user.name==
+user.email==
+user.name==
+user.email==
+user.name==
+user.email==
+user.name==
+user.email==
+filesystem.Oracle Corporation|11.0.6|-1325560749.timestampresolution=16621 microseconds
+filesystem.Oracle Corporation|11.0.6|-1325560749.minracythreshold=0 nanoseconds
+filesystem.Oracle Corporation|11.0.6|577895155.timestampresolution=6825 microseconds
+filesystem.Oracle Corporation|11.0.6|577895155.minracythreshold=0 nanoseconds
+core.repositoryformatversion=0
+core.filemode=false
+core.bare=false
+core.logallrefupdates=true
+core.symlinks=false
+core.ignorecase=true
+remote.W3layoutStroll.url=https://github.com/DanhNT99/stroll-web.git
+remote.W3layoutStroll.fetch=+refs/heads/*:refs/remotes/W3layoutStroll/*
+branch.master.remote=W3layoutStroll
+branch.master.merge=refs/heads/master

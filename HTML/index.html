@@ -7,6 +7,7 @@
     <title>Stroll a Travel Category</title>
     <link rel="stylesheet" href="../CSS/main.css">
     <link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../CSS/responsive.css">
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
 
@@ -27,7 +28,7 @@
                     <li class="header_nav-item">
                         <a href="#" class="header_nav-item-link">DESDTIANTIONS</a>
                     </li>
-                    <li class="header_nav-item item-position" v-on:click="openMenu()" id="contain_menu-drop">
+                    <li class="header_nav-item item-position"  v-on:click="openMenu()" id="contain_menu-drop">
                         <p class="header_nav-item-p">
                             BLOG<i class="fa fa-angle-down" aria-hidden="true"></i>
                         </p>
@@ -48,7 +49,45 @@
                     </li>
                 </ul>
             </nav>
+            <span class="header-icon-bar" v-on:click = "handlClickMenuMobile">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+            </span>
         </div>
+         <div class="layout-menu-mobile">
+             <ul class="menu-mobile" v-bind:class = "{'edit-width-li': classActivite}">
+                <li class="header_nav-item">
+                    <a href="#" class="header_nav-item-link item-link-first">HOME</a>
+                </li>
+                <li class="header_nav-item">
+                    <a href="#" class="header_nav-item-link">ABOUT</a>
+                </li>
+                <li class="header_nav-item">
+                    <a href="#" class="header_nav-item-link">DESDTIANTIONS</a>
+                </li>
+                <li class="header_nav-item " 
+                    v-on:click="openMenu()" 
+                    v-bind:class = "{'item-position': activiteLi}"
+                    id="contain_menu-drop">
+                    <p class="header_nav-item-p">
+                        BLOG<i class="fa fa-angle-down" aria-hidden="true"></i>
+                    </p>
+                    <ul class="header_nav-menu-drop" v-bind:class="{openDropmenu: isOpen}">
+                        <li class="menu_drop-item">
+                            <a href="#" class="menu_drop-item-link">blog</a>
+                        </li>
+                        <li class="menu_drop-item">
+                            <a href="#" class="menu_drop-item-link">blog single</a>
+                        </li>
+                        <li class="menu_drop-item">
+                            <a href="#" class="menu_drop-item-link">landing page</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="header_nav-item">
+                    <a href="#" class="header_nav-item-link">CONTACT</a>
+                </li>
+            </ul>
+         </div>
     </header>
     <section class="banner">
         <div class="container-banner">
@@ -56,7 +95,7 @@
                 <li class="banner_slider-item">
                     <div class="banner-infor">
                         <h6 class="banner_infor-sub">Mountain Holiday</h6>
-                        <h3 class="banner_infor-title">Explore your Travel <br><span>Destinations</span></h3>
+                        <h3 class="banner_infor-title">Explore your Travel <span>Destinations</span></h3>
                         <p class="banner_infor-detail">Enjoy the Best Destinations with Our Travel Agency</p>
                         <div class="banner_infor-link-layout">
                             <div class="banner_infor-div"></div>
@@ -68,7 +107,7 @@
                 <li class="banner_slider-item">
                     <div class="banner-infor">
                         <h6 class="banner_infor-sub">Mountain Holiday</h6>
-                        <h3 class="banner_infor-title">Explore your Dream <br><span>Vacation</span></h3>
+                        <h3 class="banner_infor-title">Explore your Dream <span>Vacation</span></h3>
                         <p class="banner_infor-detail">Enjoy the Best Destinations with Our Travel Agency</p>
                         <div class="banner_infor-link-layout">
                             <div class="banner_infor-div"></div>
@@ -80,7 +119,7 @@
                 <li class="banner_slider-item">
                     <div class="banner-infor">
                         <h6 class="banner_infor-sub">Mountain Holiday</h6>
-                        <h3 class="banner_infor-title">Explore your Travel <br><span>Destinations</span></h3>
+                        <h3 class="banner_infor-title">Explore your Travel <span>Destinations</span></h3>
                         <p class="banner_infor-detail">Let's Enjoy The Wonders of Nature</p>
                         <div class="banner_infor-link-layout">
                             <div class="banner_infor-div"></div>
@@ -92,7 +131,7 @@
                 <li class="banner_slider-item">
                     <div class="banner-infor">
                         <h6 class="banner_infor-sub">Mountain Holiday</h6>
-                        <h3 class="banner_infor-title">Explore your Travel <br><span>Destinations</span></h3>
+                        <h3 class="banner_infor-title">Explore your Travel <span>Destinations</span></h3>
                         <p class="banner_infor-detail">Enjoy the Best Destinations with Our Travel Agency</p>
                         <div class="banner_infor-link-layout">
                             <div class="banner_infor-div"></div>
@@ -387,12 +426,123 @@
                     </ul>
                 </div>
             </div>
+            <div class="slider-menber slider-member-mobile">
+                <div class="layout-menber layout-menber-mobile">
+                    <ul class="list-menber list-menber-mobile">
+                        <li class="menber-item">
+                            <div class="container_menber-item">
+                                <i class="fa fa-quote-left menber_item-icon" aria-hidden="true"></i>
+                                <p class="menber-detail">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                    eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua.</p>
+                                <div class="layout-img">
+                                    <img src="../IMG/menber1.jpg" alt="">
+                                    <div class="layout_img-detail">
+                                        <h3 class="menber-name">theo hall</h3>
+                                        <p class="menber-job">SEO Expert</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="menber-item">
+                            <div class="container_menber-item">
+                                <i class="fa fa-quote-left menber_item-icon" aria-hidden="true"></i>
+                                <p class="menber-detail">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                    eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua.</p>
+                                <div class="layout-img">
+                                    <img src="../IMG/menber2.jpg" alt="">
+                                    <div class="layout_img-detail">
+                                        <h3 class="menber-name">jenna johnson</h3>
+                                        <p class="menber-job">SEO Expert</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="list-menber list-menber-mobile">
+                        <li class="menber-item">
+                            <div class="container_menber-item">
+                                <i class="fa fa-quote-left menber_item-icon" aria-hidden="true"></i>
+                                <p class="menber-detail">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                    eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua.</p>
+                                <div class="layout-img">
+                                    <img src="../IMG/menber3.jpg" alt="">
+                                    <div class="layout_img-detail">
+                                        <h3 class="menber-name">linda carini</h3>
+                                        <p class="menber-job">SEO Expert</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="menber-item">
+                            <div class="container_menber-item">
+                                <i class="fa fa-quote-left menber_item-icon" aria-hidden="true"></i>
+                                <p class="menber-detail">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                    eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua.</p>
+                                <div class="layout-img">
+                                    <img src="../IMG/menber4.jpg" alt="">
+                                    <div class="layout_img-detail">
+                                        <h3 class="menber-name">mike johnson</h3>
+                                        <p class="menber-job">SEO Expert</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="list-menber list-menber-mobile">
+                         <li class="menber-item">
+                            <div class="container_menber-item">
+                                <i class="fa fa-quote-left menber_item-icon" aria-hidden="true"></i>
+                                <p class="menber-detail">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                    eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua.</p>
+                                <div class="layout-img">
+                                    <img src="../IMG/menber5.jpg" alt="">
+                                    <div class="layout_img-detail">
+                                        <h3 class="menber-name">theo hall</h3>
+                                        <p class="menber-job">SEO Expert</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="menber-item">
+                            <div class="container_menber-item">
+                                <i class="fa fa-quote-left menber_item-icon" aria-hidden="true"></i>
+                                <p class="menber-detail">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                    eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua.</p>
+                                <div class="layout-img">
+                                    <img src="../IMG/menber6.jpg" alt="">
+                                    <div class="layout_img-detail">
+                                        <h3 class="menber-name">jenna johnson</h3>
+                                        <p class="menber-job">SEO Expert</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
             <ul class="list_menber-btn-cricle">
                 <li class="btn_menber-cricle-item">
                     <span class="btn_menber-cricle"></span>
                 </li>
                 <li class="btn_menber-cricle-item">
                     <span class="btn_menber-cricle"></span>
+                </li>
+            </ul>
+            <ul class="list_menber-btn-cricle list_menber-btn-cricle-mobile">
+                <li class="btn_menber-cricle-item btn_menber-cricle-item-mobile">
+                    <span class="btn_menber-cricle btn_menber-cricle-mobile"></span>
+                </li>
+                <li class="btn_menber-cricle-item btn_menber-cricle-item-mobile">
+                    <span class="btn_menber-cricle btn_menber-cricle-mobile"></span>
+                </li>
+                <li class="btn_menber-cricle-item btn_menber-cricle-item-mobile">
+                    <span class="btn_menber-cricle btn_menber-cricle-mobile"></span>
                 </li>
             </ul>
         </div>
@@ -496,17 +646,22 @@
             </div>
             <ul class="below_list-left">
                 <li class="below_list-left-item">
-                    <a href="#">About us</a>
+                    <a href="#">Privacy Policy</a>
                 </li>
                 <li class="below_list-left-item">
-                    <a href="#">About us</a>
+                    <a href="#">About Us</a>
                 </li>
                 <li class="below_list-left-item">
-                    <a href="#">About us</a>
+                    <a href="#">Contact Us</a>
                 </li>
             </ul>
         </div>
     </section>
+    <div class="layout-btn-scroll">
+        <span class="btn-scroll">
+            <i class="fa fa-arrow-up" aria-hidden="true"></i>
+        </span>
+    </div>
     <script src="../JS/index.js"></script>
     <script src="../JS/slider.js"></script>
     <script src="../JS/tour.js"></script>

@@ -18,6 +18,14 @@ moveSlider({
     classActivity: "activity-item",
     classBtn: "color_btn-cricle-red"
 });
+moveSlider({
+    containSlider: ".layout-menber-mobile",
+    listSlider: ".list-menber-mobile",
+    listContainBtn: ".btn_menber-cricle-item-mobile",
+    listBtn: ".btn_menber-cricle-mobile",
+    classActivity: "activity-item",
+    classBtn: "color_btn-cricle-red"
+});
 function moveSlider(obj) {
     let containSlider = document.querySelector(obj.containSlider);
     let listSlider = containSlider.querySelectorAll(obj.listSlider);
