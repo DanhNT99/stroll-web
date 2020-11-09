@@ -52,8 +52,3 @@ window.onscroll  = () => {
         })
     })
 }
-//click display menu-mobie
-function handleClickMenuMoible () {
-   
-}
-handleClickMenuMoible();

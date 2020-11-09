@@ -310,6 +310,9 @@
         .list_btn-cricle {
             bottom: 30px;
         }
+        .banner-infor{
+            height: 235px;
+        }
         /* ------------untilities -------------*/
         .utilities_item {
             width: 100%;
